@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Freecycling: Front Door</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="345as.css" />
+  </head>
+  <body>
+    <header class="header">
+      <img src="main-logo.jpg" alt="logo" width="276px" height="187px" />
+
+      <!-- <h2>main menu</h2> -->
+      <nav
+        style="
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          justify-content: space-around;
+          margin-right: 24px;
+        "
+      >
+        <!-- <h2>spot menu</h2> -->
+        <!-- <nav class="spot-menu"> -->
+        <nav style="display: flex; justify-content: end; gap: 56px">
+          <div
+            style="transform: translateY(-30px)"
+            class="newsletter-box custom-background-colour"
+          >
+            NEWSLETTER
+          </div>
+          <ul style="display: flex; gap: 24px">
+            <li>
+              <img
+                src="search-icon.png"
+                alt="search"
+                width="45px"
+                height="45px"
+              />
+            </li>
+            <li>
+              <img src="fb.png" alt="fb" width="45px" height="45px" />
+            </li>
+            <li>
+              <img src="instagram.svg" alt="insta" width="45px" height="45px" />
+            </li>
+          </ul>
+        </nav>
+
+        <div
+          style="
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            align-items: center;
+            margin-bottom: 12px;
+          "
+        >
+          <!-- <ul class="nav"> -->
+          <ul
+            style="
+              display: flex;
+              font-size: 27px;
+              font-weight: bold;
+              flex: 2;
+              justify-content: space-around;
+              margin-left: 120px;
+            "
+          >
+            <li class="custom-colour">HOME</li>
+            <li class="custom-colour">ABOUT</li>
+            <li class="custom-colour">SERVICE</li>
+            <li class="custom-colour">CONTACT</li>
+          </ul>
+          <!-- <div class="sign-log-btn"> -->
+          <div style="display: flex; flex: 1; justify-content: end; gap: 24px">
+            <li><button id="signup-btn" class="signup-btn">SIGN UP</button></li>
+            <li>|</li>
+            <li><button class="login-btn">LOG IN</button></li>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <img
+      src="support-image.jpg"
+      alt="support"
+      style="width: 100vw; height: 460px; object-fit: cover"
+    />
+
+    <div class="bottom">
+      <div class="part1">
+        <h2 class="about-title">ABOUT US</h2>
+
+        <p class="welcome-firstline">Welcome to The Freecycle Network™!</p>
+        <p class="text">
+          We are a grassroots & entirely nonprofit movement of people<br />
+          who are giving and getting stuff for free in their own Towns. It's all
+          about reuse and keeping good stuff out of landfills.<br />
+          Membership is free. And now you can also set up your own, smaller
+          personal Friends Circle for gifting and lending of items with just
+          your friends!
+        </p>
+        <button id="sign-up-now" class="sign-up-now custom-colour">
+          Sign up now.
+        </button>
+      </div>
+      <div class="part2">
+        <h2 class="recent-item-title">RECENT ITEMS</h2>
+
+        <div class="items-container">
+          <!-- Item 1 -->
+          <div class="item-card">
+            <img src="offer(item).png" alt="Offer" class="offer-tag" />
+            <img src="address(item).png" alt="Location" class="location-tag" />
+            <div class="img">
+              <img
+                src="item image1.jpg"
+                alt="Item Image"
+                class="item-image"
+                width="350px"
+                height="180px"
+              />
+            </div>
+            <h3 class="item-name">3 X LARGE water bottles</h3>
+            <p class="twodays">2 days ago</p>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="item-card">
+            <img src="offer(item).png" alt="Offer" class="offer-tag" />
+            <img src="address(item).png" alt="Location" class="location-tag" />
+            <div class="img">
+              <img
+                src="item image2.jpg"
+                alt="Item Image"
+                class="item-image"
+                width="350px"
+                height="180px"
+              />
+            </div>
+            <h3 class="item-name">Bathroom Mirror...</h3>
+            <p class="twodays">2 days ago</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ///////////////////////////////////////////////// -->
+
+    <div id="form-ct">
+      <div id="trigger-modal" class="modal hidden">
+        <div class="modal__overlay">
+          <div class="modal-content">
+            <div class="modal-header">
+              <img
+                src="main-logo.jpg"
+                alt="Freecycle Logo"
+                class="modal-logo"
+              />
+              <button class="close">&times;</button>
+              <h2 class="custom-colour modal-header__title">
+                Welcome to Freecycling !
+              </h2>
+            </div>
+
+            <form id="registration-form">
+              <section id="userInfo">
+                <div id="user-details">
+                  <legend>User details</legend>
+                  <label for="given-name">Given Name</label>
+                  <input
+                    type="text"
+                    id="given-name"
+                    class="given-name"
+                    name="given-name"
+                    placeholder="Given name"
+                  />
+
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-around;
+                      margin: 0 36px;
+                    "
+                  >
+                    <label for="sur-name">Surname</label>
+                    <input type="text" id="sur-name" placeholder="Surname" />
+                  </div>
+
+                  <label for="username">Username</label>
+                  <input type="text" id="username" placeholder="Username" />
+
+                  <label for="password">Password</label>
+                  <input type="password" id="password" placeholder="Password" />
+                </div>
+              </section>
+
+              <section id="addressInfo">
+                <div id="address-details">
+                  <legend>Addresses</legend>
+                  <fieldset>
+                    <label for="home-address">Home Address</label>
+                    <input
+                      type="text"
+                      id="home-address"
+                      placeholder="Home Address"
+                    />
+
+                    <label for="work-address">Work Address</label>
+                    <input
+                      type="text"
+                      id="work-address"
+                      placeholder="Work Address"
+                    />
+                  </fieldset>
+                </div>
+              </section>
+              <section id="contactInfo">
+                <div id="contact-details">
+                  <legend>Contacts</legend>
+                  <fieldset>
+                    <label for="mobile-number">Mobile Number</label>
+                    <input type="tel" id="mobile-number" placeholder="+ 64" />
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Email" />
+                  </fieldset>
+                </div>
+              </section>
+
+              <button
+                class="submit custom-background-colour"
+                type="submit"
+                id="submit"
+              >
+                SUBMIT
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
